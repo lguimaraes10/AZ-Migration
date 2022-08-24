@@ -34,7 +34,7 @@ move 2012-R2.vhd c:\vms
 
 cd c:\vms
 
-$url = "https://raw.githubusercontent.com/cemvarol/AZ-Migration/master/Guest.ps1"
+$url = "https://raw.githubusercontent.com/lguimaraes10/AZ-Migration/master/Guest.ps1"
 $output = ".\Guest.ps1"
 $start_time = Get-Date
 Invoke-WebRequest -Uri $url -OutFile $output
@@ -46,7 +46,7 @@ Dismount-VHD –Path ".\2012-R2.vhd"
 
 New-VM -VHDPath .\2012-R2.vhd -Confirm -Generation 1 -MemoryStartupBytes 3GB -Name 2012-R2 -Path c:\VMs\ -Switch VMs –Force
 
-$url = "https://raw.githubusercontent.com/cemvarol/AZ-Migration/master/Guest.ps1"
+$url = "https://raw.githubusercontent.com/lguimaraes10/AZ-Migration/master/Guest.ps1"
 $output = ".\Guest.ps1"
 $start_time = Get-Date
 Invoke-WebRequest -Uri $url -OutFile $output
